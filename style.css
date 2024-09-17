@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(#e0eaf3, #cfdef3);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#heading {
+  color: #003399;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+p {
+  color: #003399;
+}
+
+h1#name {
+  font-size: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 5px;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titles h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  gap: 130px;
+}
+#contact > li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-left: 5px;
+  justify-content: center;
+}
+span {
+  font-weight: 700;
+}

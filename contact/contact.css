@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Plus Jakarta Sans;
+}
+.contact {
+  margin-top: 80px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url(".././assets/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 20px;
+}
+
+.wrap {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  height: 500px;
+  width: 70%;
+  padding: 20px;
+}
+.gaps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+img {
+  height: 250px;
+  width: 250px;
+}
+h2 {
+  font-size: 28px;
+  color: #864ef2;
+}
+p {
+  width: 100%;
+  margin-left: 80px;
+}
+.imagepart {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact-form {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  flex-direction: column;
+}
+button {
+  background-color: #864ef2;
+  height: 40px;
+  width: 300px;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+button:hover {
+  background-color: #7847db;
+}
+input {
+  height: 30px;
+  width: 300px;
+  border: none;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  caret-color: orange;
+  font-size: 16px;
+  padding: 3px;
+}
+textarea {
+  height: 80px;
+  width: 300px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  caret-color: orange;
+  padding: 3px;
+}
+img:hover {
+  animation: hover 0.3s ease-in-out;
+}
+
+@keyframes hover {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
