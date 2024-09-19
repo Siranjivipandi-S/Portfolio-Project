@@ -1,9 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+nav {
+  background: linear-gradient(to right, blue, rgb(41, 120, 217), blue);
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles for the navbar list */
+nav > ul {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+nav > ul > li {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  position: relative;
+  top: 5px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav > ul > li > a:hover {
+  color: whitesmoke;
+  transform: scale(1.1);
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+nav > ul > li > a:hover::before {
+  transform: scaleX(1);
+}
+/* Display hamburger menu */
+.hamburger {
+  display: none;
+}
+
+/* Styles for hamburger menu */
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+#changemode {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  position: relative;
+  top: 5px;
+  transition: background 0.2s ease;
+}
+
+#changemode:hover {
+  background: rgb(223, 225, 227);
 }
 
 body {
@@ -12,7 +104,7 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(black, rgb(122, 119, 119), black);
   margin: 0;
   padding: 0;
 }
@@ -27,6 +119,12 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.container.dark {
+  background: linear-gradient(black, rgb(18, 18, 18), black);
+  color: white;
+  border: 2px solid whitesmoke;
+}
+
 #heading {
   color: #003399;
   font-weight: bold;
@@ -36,6 +134,7 @@ body {
 
 p {
   color: #003399;
+  margin: 10px 0;
 }
 
 h1#name {
@@ -66,13 +165,19 @@ ul li {
   align-items: center;
 }
 
+.hero {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
 .titles h1 {
   font-size: 18px;
   margin: 0;
-}
-
-p {
-  margin: 10px 0;
 }
 
 hr {
@@ -102,42 +207,114 @@ span {
   font-weight: 700;
 }
 
+.contact-section {
+  margin-top: 80px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url(".././assets/hero.png");
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  background-size: cover;
+  padding-block: 20px;
+}
+
+.wrap-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20px;
+  height: 500px;
+  width: 70%;
+  padding: 20px;
+}
+
+.imagepart-contact > img {
+  height: 250px;
+  width: 250px;
+}
+.wrap-contact.dark {
+  background: linear-gradient(black, rgb(102, 101, 101), black);
+  color: white;
+}
+
+.container.dark .contact-btn,
+.wrap-contact.dark .contact-btn {
+  background-color: #333;
+  color: white;
+}
+
+.wrap-contact.dark p {
+  color: white;
+}
+
+.wrap-contact.dark a {
+  color: bisque;
+}
+.gaps-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-btn {
+  background-color: #864ef2;
+  height: 40px;
+  width: 300px;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #7847db;
+}
+
+#email-contact,
+#name-contact,
+#message-contact {
+  height: 30px;
+  width: 300px;
+  border: none;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  caret-color: purple;
+  font-size: 16px;
+  padding: 8px 10px;
+}
+
+textarea#message-contact {
+  height: 80px;
+  outline: none;
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
-  .container {
-    margin: 10px;
+  nav {
+    flex-direction: column;
     padding: 10px;
   }
 
-  #heading {
-    font-size: 20px;
+  nav > ul {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
-  h1#name {
-    font-size: 24px;
+  nav > ul > li {
+    margin: 10px 0;
   }
 
-  #contact {
-    grid-template-columns: repeat(2, 1fr);
+  #changemode {
     margin-top: 10px;
-    gap: 10px;
-  }
-
-  #contact > li {
-    justify-content: flex-start;
-  }
-
-  .titles {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .titles h1 {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-
-  ul {
-    padding-left: 10px;
   }
 }
 
@@ -146,6 +323,46 @@ span {
     margin: 5px;
     padding: 5px;
     padding-left: 15px;
+  }
+
+  .wrap-contact {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid whitesmoke;
+    box-shadow: 5px 5px 40px rgb(44, 43, 43);
+  }
+  .imagepart-contact > h2 {
+    margin-left: 80px;
+  }
+  .imagepart-contact > p {
+    margin-left: 50px;
+  }
+  .imagepart-contact {
+    width: 100%;
+  }
+  .imagepart-contact > img {
+    display: none;
+  }
+
+  #contact-form {
+    width: 80%;
+  }
+
+  #email-contact,
+  #name-contact,
+  textarea#message-contact {
+    width: 250px;
+  }
+
+  .contact-btn {
+    width: 250px;
+  }
+
+  .contact-section {
+    background-image: none;
   }
 
   #heading {
@@ -178,7 +395,20 @@ span {
   ul {
     padding-left: 5px;
   }
+
   li {
     list-style-type: none;
+  }
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav > ul {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    border-radius: 20px;
+    padding: 2px 8px 2px 8px;
   }
 }
