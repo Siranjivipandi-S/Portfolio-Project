@@ -214,7 +214,7 @@ span {
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-image: url(".././assets/hero.png");
+  background-image: url("./assets/hero.png");
   background-repeat: no-repeat;
   border-radius: 50px;
   background-size: cover;
