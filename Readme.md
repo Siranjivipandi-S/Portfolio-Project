@@ -13,14 +13,14 @@
 - Install Git on your system.
 - Set your username:
   ```bash
-  git config --global user.name "John"
+  git config --global user.name "Siranjivi"
   ```
 
 ````
 
 - Set your email:
   ```bash
-  git config --global user.email "John@gmail.com"
+  git config --global user.email "siranjivi48@gmail.com"
   ```
 
 ## 4. GitHub Alternatives
